@@ -6,8 +6,12 @@ public class Fluxo {
         System.out.println("Ini do main");
         try {
             metodo1();
-        } catch (ArithmeticException e) {
-        	System.out.println("ArithmeticException");
+        // A | entre os tipos de exceção serve como um OR, ou um tipo de erro ou outro, tem a mesma trataiva
+        } catch (ArithmeticException | NullPointerException e) {
+        	String msg = e.getMessage();
+        	System.out.println("ArithmeticException: " + msg);
+        	// Imprime o rastro do erro
+//        	e.printStackTrace();
         }
         System.out.println("Fim do main");
     }
@@ -23,6 +27,8 @@ public class Fluxo {
         for(int i = 1; i <= 5; i++) {
             System.out.println(i);
             int a = i / 0;
+            Conta conta = null;
+            conta.deposita();
         }
         System.out.println("Fim do metodo2");
     }
