@@ -25,7 +25,9 @@ public class Fluxo {
     private static void metodo2() throws MinhaExcecao {
         System.out.println("Ini do metodo2");
         
-         new MinhaExcecao("deu muito errado");
+         //new MinhaExcecao("deu muito errado");
+         
+         throw new Teste();
         
 //        System.out.println("Fim do metodo2");
     }
