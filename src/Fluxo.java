@@ -10,7 +10,11 @@ public class Fluxo {
 
     private static void metodo1() {
         System.out.println("Ini do metodo1");
-        metodo2();
+        try {
+            metodo2();
+        } catch (ArithmeticException e) {
+        	System.out.println("ArithmeticException");
+        }
         System.out.println("Fim do metodo1");
     }
 
