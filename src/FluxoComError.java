@@ -23,10 +23,8 @@ public class FluxoComError {
     }
 
     private static void metodo2() {
-        System.out.println("Ini do metodo2");
-        
-        throw new MinhaExcecao("deu muito errado");
-        
-//        System.out.println("Fim do metodo2");
+    	System.out.println("Ini metodo 2");
+    	metodo2();
+    	System.out.println("Fim do metodo 2");
     }
 }
