@@ -7,7 +7,7 @@ public class FluxoComError {
         try {
             metodo1();
         // A | entre os tipos de exceção serve como um OR, ou um tipo de erro ou outro, tem a mesma trataiva
-        } catch (ArithmeticException | NullPointerException | MinhaExcecao e) {
+        } catch (Exception e) {
         	String msg = e.getMessage();
         	System.out.println("Exception: " + msg);
         	// Imprime o rastro do erro

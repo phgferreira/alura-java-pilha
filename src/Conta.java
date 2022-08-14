@@ -1,7 +1,6 @@
 
 public class Conta {
 
-	void deposita() {
-		System.out.println("Deposita");
+	void deposita() throws MinhaExcecao {
 	}
 }
