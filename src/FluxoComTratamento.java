@@ -7,7 +7,7 @@ public class FluxoComTratamento {
         try {
             metodo1();
         // A | entre os tipos de exceção serve como um OR, ou um tipo de erro ou outro, tem a mesma trataiva
-        } catch (ArithmeticException | NullPointerException e) {
+        } catch (Exception e) {
         	String msg = e.getMessage();
         	System.out.println("ArithmeticException: " + msg);
         	// Imprime o rastro do erro
@@ -16,13 +16,13 @@ public class FluxoComTratamento {
         System.out.println("Fim do main");
     }
 
-    private static void metodo1() {
+    private static void metodo1() throws MinhaExcecao {
         System.out.println("Ini do metodo1");
         metodo2();
         System.out.println("Fim do metodo1");
     }
 
-    private static void metodo2() {
+    private static void metodo2() throws MinhaExcecao {
         System.out.println("Ini do metodo2");
         for(int i = 1; i <= 5; i++) {
             System.out.println(i);
